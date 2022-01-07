@@ -1,35 +1,3 @@
-<input type="text" [(ngModel)]="title">
 
-{{ title }}
+<router-outlet></router-outlet>
 
-
-
-<div *ngIf="title == 'Belen'">
-    Bacano
-</div>
-
-<div [ngSwitch]="title">
-  <p *ngSwitchCase="'Dev'">Dev</p>
-  <p *ngSwitchCase="'Ops'">Ops</p>
-  <p *ngSwitchCase="'Bel'">Bel</p>
-  <p *ngSwitchCaseDefault>Nichi</p>
-
-</div>
-
-
-<button (click)= "addItem()"> Adicionar</button>
-
-<ul>
-  <li *ngIf="items.length === 0">No hay nichi</li>
-
-  <li *ngFor="let list of items; index as i"> 
-  
-    
-    {{ list }}  {{ i }} <button (click)="deleteItem(i)"> Eliminar </button>
-  </li>
-
-</ul>
-
-<div *ngFor="let product of products"> 
-  <app-product [product]="product"></app-product>
-</div>
