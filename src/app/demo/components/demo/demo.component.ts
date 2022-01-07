@@ -7,16 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
   title = 'dev-project-angular';
 
   items = ['Dev', 'Ops', 'Bel'];
 
-  
+  ngOnInit() {
+  }
+
+
 
   
   addItem(){

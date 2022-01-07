@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, OnInit, DoCheck } from "@angular/core";
-import { Product } from '../product.model';
+import { Product } from "src/app/core/models/product.model";
 
 @Component({
     selector: 'app-product',
@@ -7,7 +7,7 @@ import { Product } from '../product.model';
     styleUrls: ['./product.component.scss']
 })
 
-export class ProductComponent implements DoCheck, OnInit{
+export class ProductComponent implements  OnInit{
 
     @Input() product: Product;
     @Output() productAddCart: EventEmitter<any> = new EventEmitter();
@@ -26,9 +26,9 @@ export class ProductComponent implements DoCheck, OnInit{
         console.log('3. OnInit');
     }
 
-    ngDoCheck(){
-        console.log('4. ngDoCheck');
-    }
+    // ngDoCheck(){
+    //     console.log('4. ngDoCheck');
+    // }
 
     addCart() {
         console.log('Agregando al carro');
