@@ -1,17 +1,23 @@
-<mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <div class="row between-xs middle-xs header-row">
-        <nav>
-          <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
-          <a mat-button routerLink="/products" routerLinkActive="active"
-            >Products</a
-          >
-          <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
-        </nav>
-        <a mat-raised-button matBadge="4" matBadgeColor="warn">
-          <mat-icon>shopping_cart</mat-icon>
-          Carrito
-        </a>
-      </div>
-    </mat-toolbar-row>
-  </mat-toolbar>
+<mat-toolbar class="header-toolbar" color="primary">
+  <mat-toolbar-row>
+    <div class=" between-xs middle-xs header-row">
+      <nav>
+        <a mat-button routerLink="/home" routerLinkActive="active">Inicio</a>
+        <a mat-button routerLink="/products" routerLinkActive="active">Productos</a>
+        <a mat-button routerLink="/contact" routerLinkActive="active">Contacto</a>
+        <a mat-button routerLink="/demo" routerLinkActive="active">Utilidades</a>
+        
+      </nav>
+    </div>
+      <a  mat-raised-button routerLink="/admin">
+        <mat-icon>settings</mat-icon>
+        Admin
+      </a>
+      <a mat-raised-button matBadge="4" matBadgeColor="warn">
+        <mat-icon>shopping_cart</mat-icon>
+        Carrito
+      </a>
+
+    
+  </mat-toolbar-row>
+</mat-toolbar>

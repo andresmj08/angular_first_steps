@@ -11,6 +11,8 @@ Importante:
     4. Instalar libreria FlexboxGrid
         → npm i flexboxgrid --save
 
+    5. Agregar libreria cdk
+        → ng add @angular/cdk
 --------------------------------------------
 Comandos Importantes
 
