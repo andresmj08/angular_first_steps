@@ -13,6 +13,10 @@ Importante:
 
     5. Agregar libreria cdk
         → ng add @angular/cdk
+
+    6. Instalar la libreria de FireBase
+        → npm install firebase @angular/fire --save
+        → ng add @angular/fire
 --------------------------------------------
 Comandos Importantes
 
