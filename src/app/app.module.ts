@@ -10,8 +10,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-// import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { environment } from 'src/environments/environment.prod';
+
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { environment } from 'src/environments/environment.prod';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    // AngularFireStorage
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
