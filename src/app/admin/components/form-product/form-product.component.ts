@@ -16,7 +16,7 @@ import { Observable } from 'rxjs';
 export class FormProductComponent implements OnInit {
 
   form: FormGroup;
-  image: Observable<any>;
+  image$: Observable<any>;
 
 
   constructor(
@@ -60,14 +60,18 @@ export class FormProductComponent implements OnInit {
 
   uploadFile(event){
     const file = event.target.files[0];
-    const dir = 'images';
-    const fileRef = this.storage.ref(dir);
-    const task = this.storage.upload(dir, file);
+    const name = file.name;
+    const fileRef = this.storage.ref(name);
+    const task = this.storage.upload(name, file);
 
     task.snapshotChanges()
     .pipe(
       finalize(() => { 
-      this.image = fileRef.getDownloadURL();
+        this.image$ = fileRef.getDownloadURL();
+        this.image$.subscribe(url => {
+          console.log(url);
+          this.form.get('image').setValue(url);
+        });
       })
     )
     .subscribe();
